@@ -1,0 +1,67 @@
+<div class="container" > 
+    <div class="row bg-secondary mt-5"  style="height: 500px ; background-size: cover; background-repeat: no-repeat;">
+      <div class="background-overlay"></div>
+    <div class="col-2 m-5">
+      <img
+        clas=""
+        style="height:90%"
+        src="https://image.tmdb.org/t/p/w300/{{ film.poster_path }}"
+        alt="image"
+      />
+    </div>
+    <div class="body col-9 mt-5 p-5 text-warning">
+      <h1 >{{ film.title }}</h1>
+      <div class="text text-light d-flex mt-4">
+        <h6>Date de publication </h6>
+        <p class=""> : {{ film.release_date }}</p>
+      </div>
+      <div class="text text-light d-flex ">
+        <h6>Pupularite </h6>
+        <p class="">: {{film.popularity }}</p>
+      </div>
+      <div class="text text-light d-flex ">
+        <h6>Nombre de vote </h6>
+        <p class="">: {{ film.vote_count }}</p>
+      </div>
+      <button type="button" class="btn btn-light favoris mt-2" (click)="toggleLike()" [ngClass]="{but: isLiked==true}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart " viewBox="0 0 16 16">
+          <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+        </svg>
+        ajouter aux Favoris
+        </button>
+        
+      <div class="text text-light">  </div>
+      <div class="text text-light ">
+        <h3 class=" text-center">Overview :</h3>
+        <p class=""> {{ film.overview }}</p>
+        
+      </div>
+    </div> 
+  </div> 
+</div>
+
+<div class="commentaire container mt-5 bg-secondary">
+  <h3>Comments</h3>
+  <div class="mb-3">
+  </div>
+  <form style="width: 600px;" class="ml-auto">
+    <label for="Entrer un commentaire" class="form-label">Entrer un commentaire</label>
+    <textarea class="form-control" [(ngModel)]="newComment" name="newComment" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <!-- <input type="text" id="newComment" [(ngModel)]="newComment" name="newComment" required> -->
+    <!-- <p>{{newComment}}</p> -->
+    <button type="submit" (click)="addComment()">Submit</button>
+    <button type="submit" (click)="allCommentaire()">All comment</button>
+
+  </form>
+  <ul class="mt-2 ml-auto text-light " style=" width:600px ; border-radius: 10px;">
+    <li *ngFor="let comment of comments">
+      <div class="m-2" style="width: 500px; border-radius:10px; border: solid rgb(10, 10, 10) 2px;">
+        <h5>Utilisateur: {{username}}</h5>
+        <p class="p-2"> {{ comment.text}}</p>
+      </div>
+    </li>
+
+  </ul>
+
+  <!-- <quill-editor [(ngModel)]="newComment"></quill-editor> -->
+</div>

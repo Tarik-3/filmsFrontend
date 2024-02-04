@@ -1,0 +1,34 @@
+h1  {
+    /* color: rgb(250, 205, 5); */
+
+    font-weight: bold;
+}
+
+.bod{
+    background-image: url("https://image.tmdb.org/t/p/w300/{{ Film.backdrop_path }}");
+    /* background-color: aqua; */
+}
+
+
+.favoris{
+    border-radius:20px ;
+    cursor: pointer;
+    transition: 0.4s;
+    background: none;
+    color: #fff;
+    border: solid yellow 2px;
+  }
+
+  .but{
+    border-radius:20px ;
+    cursor: pointer;
+    transition: 0.4s;
+    background: yellow;
+    color: #ae1e1e;
+    border: solid yellow 2px;
+  }
+
+  
+
+
+  

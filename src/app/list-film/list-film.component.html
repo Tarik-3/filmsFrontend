@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="container " style="height: 100%;">
+    <div class="col-6 mt-4 m-auto"> 
+      <form class="d-flex col-8"  role="search" >
+        <input class="form-control me-2" type="search" [(ngModel)]="this.movies.searching" name="searching"  placeholder="Cherchez Votre Film ..." aria-label="Search">
+        <!-- <input [(ngModel)]="searching" name="searching" /> -->
+        <button class="btn btn-outline-dark" type="submit" (click)="getListFilm()">Chercher </button>  
+      </form>
+    </div>
+    <div class="row ">
+      <app-item-film
+        class="col-3"
+        *ngFor="let item of films"
+        [film]="item" 
+      ></app-item-film>
+    </div>
+  </div>
+</body>
+</html>
+

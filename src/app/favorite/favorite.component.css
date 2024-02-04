@@ -1,0 +1,39 @@
+.card {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+  
+  .card:hover .card-body {
+    bottom: 0;
+  }
+  
+  .card-body {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 1rem 1.5em 2em;
+    backdrop-filter: blur(12px);
+    background-color: rgb(55, 53, 53,0.1);
+    transition: 0.6s;
+  }
+
+  .favoris{
+    border-radius:20px ;
+    cursor: pointer;
+    transition: 0.4s;
+    background: none;
+    color: #fff;
+    border: solid yellow 2px;
+  }
+
+  .but{
+    border-radius:20px ;
+    cursor: pointer;
+    transition: 0.4s;
+    background: yellow;
+    color: #ae1e1e;
+    border: solid yellow 2px;
+  }

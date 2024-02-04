@@ -1,0 +1,9 @@
+
+    <!-- <app-description [filmdetail]="film" /> -->
+    <div class="row ">
+        <app-item-film
+          class="col-3"
+          *ngFor="let item of this.service.favorites"
+          [film]="item" 
+        ></app-item-film>
+</div>

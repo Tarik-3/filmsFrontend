@@ -1,0 +1,21 @@
+.card {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+  
+  .card:hover .card-body {
+    bottom: 0;
+  }
+  
+  .card-body {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 1rem 1.5em 2em;
+    backdrop-filter: blur(12px);
+    background-color: rgb(55, 53, 53,0.1);
+    transition: 0.6s;
+  }

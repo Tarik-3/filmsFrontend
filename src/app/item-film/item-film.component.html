@@ -1,0 +1,26 @@
+
+<div class="card bg-dark m-4">
+  <img
+    class="card-image m-1 text-center"
+    [src]="getUrl(film.poster_path)"
+    alt="image"
+  />
+  <!-- <img src="https://image.tmdb.org/t/p/w300{{film.backdrop_path}}" alt="" /> -->
+  <div class="card-body text-light">
+    <div class="card-title text-center text-light">
+      <h5>{{film.title  }}</h5>
+    </div>
+    <div class="card-text">
+      <p>Vote average: {{film.vote_average  }}</p>
+      <p>Vote count: {{film.vote_count  }}</p>
+    </div>
+    
+    
+    <div class="text-center mt-5">
+      <button class="btn btn-primary" [routerLink]="['/membre/detail/',film.id]">
+        Details
+      </button>
+    </div>
+  </div>
+  <!-- <app-description [filmdetail]="film" /> -->
+</div>

@@ -1,0 +1,21 @@
+<div class="sign">
+    <div class="card m-4">
+      <div class="card-header">Sign up</div>
+  
+      <div class="card-body">
+        <form [formGroup]="formSign" (ngSubmit) = "handleSign(username.value,password.value)">
+          <div class="mb-3">
+            <label for="">Username</label>
+            <input type="text" class="form-control" #username formControlName="username"/>
+          </div>
+          <div class="mb-3">
+            <label for="">Password</label>
+            <input type="password" class="form-control" #password formControlName="password"/>
+          </div>
+          <button type="submit" class="btn btn-success">Sign up</button>
+          <!-- <button class="btn btn-outline-dark" [routerLink]="['/login']" >sign in</button> -->
+        </form>
+      </div>
+    </div>
+  </div>
+  

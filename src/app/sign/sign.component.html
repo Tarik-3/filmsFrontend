@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<div class="sign container ">
+  <div class="card m-4">
+    <div class="card-header">Authentification</div>
+
+    <div class="card-body">
+      <form [formGroup]="formSign" (ngSubmit) = "handleSign(username.value,password.value)">
+        <div class="mb-3">
+          <label for="">Username</label>
+          <input type="text" class="form-control" #username formControlName="username"/>
+        </div>
+        <div class="mb-3">
+          <label for="">Password</label>
+          <input type="password" class="form-control" #password formControlName="password" />
+        </div>
+        <button class="btn btn-success">Login</button>
+        <button class="btn btn-outline-success" [routerLink]="['/sign-up']" >sign up</button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
